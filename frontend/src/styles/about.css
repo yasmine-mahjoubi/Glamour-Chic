@@ -1,0 +1,263 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.about {
+    padding: 2rem;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about__description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+
+.title{
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+.filter__btns {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.filter__btns ul{
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.filter__btns::after{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-20%);
+    height: 2px;
+    width: 0;
+    background-color: #333;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter__btns li:hover{
+    color: black; 
+    font-size: 18px;
+}
+
+.filter__btns li::before{
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 3px;
+    border-radius: 6px;
+    transition: 0.5s;
+    
+}
+
+.filter__btns li:hover::before{
+    width: 100%;
+}
+
+.filter__btns ul li{
+    margin: 0 10px;
+}
+
+.box{
+    max-width: 480px;
+    width: 100%;
+    margin-left: 395px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box .search-box{
+    position: relative;
+    height: 50px;
+    max-width: 48px;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) ;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#check:checked ~ .search-box{
+    max-width: 380px;
+}
+
+.search-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: #f08fd904;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.search-box .icon{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 50px;
+    background: #fff;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: var(--secondary-color);
+    font-size: 23px;
+    border-radius: 25px;
+}
+
+#check:checked ~ .search-box .icon{
+    background: var(--secondary-color);
+    color: #fff;
+    width: 60px;
+    border-radius: 0 25px 25px 0;
+}
+
+#check{
+    display: none;
+}
+
+.center {
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 250px; 
+    margin-bottom: 20px; 
+}
+
+.center:hover {
+    transform: translateY(-5px);
+}
+
+.center img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; 
+    margin-bottom: 1rem;
+}
+
+.about__centers p {
+    font-weight: bold;
+    font-size: .8rem; 
+    color: #000000;
+    margin: 0;
+}
+
+.description__button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; 
+    margin-right: -20px; 
+}
+
+.description__button:hover{
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    cursor: pointer;
+    color: var(--secondary-color); 
+    background-color: #fff;
+}
+
+
+.section__title {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    margin-bottom: 1.5rem; 
+}
+
+.about__description {
+    font-size: 1.2rem; 
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.about__filter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+.filter__item {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+
+.filter__item.selected {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+
+.custom-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.modal-content {
+    border-radius: 15px; 
+}
+
+.modal-header {
+    border-bottom: none; 
+}
+
+.modal-footer {
+    border-top: none; 
+}
+
+.custom-modal .btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.custom-modal .btn-secondary:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black; 
+}
